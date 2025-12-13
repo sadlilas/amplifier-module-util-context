@@ -1,0 +1,59 @@
+[project]
+name = "amplifier-module-util-context"
+version = "0.1.0"
+description = "Amplifier module for LLM context window management utilities"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [
+    { name = "Salil" }
+]
+keywords = ["amplifier", "llm", "context", "tokens", "utilities"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+dependencies = [
+    "amplifier-core @ git+https://github.com/microsoft/amplifier-core",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.1.0",
+]
+tiktoken = [
+    "tiktoken>=0.5.0",
+]
+
+# Amplifier module entry point
+[project.entry-points."amplifier.modules"]
+util-context = "amplifier_module_util_context:mount"
+
+[project.urls]
+Repository = "https://github.com/salil/amplifier-module-util-context"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/amplifier_module_util_context"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
