@@ -9,7 +9,7 @@ This module provides generic utilities for fitting domain state into LLM context
 ## Installation
 
 ```bash
-pip install amplifier-module-util-context @ git+https://github.com/salil/amplifier-module-util-context
+pip install git+https://github.com/sadlilas/amplifier-module-util-context
 ```
 
 ## Usage

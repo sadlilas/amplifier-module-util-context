@@ -38,7 +38,8 @@ tiktoken = [
 util-context = "amplifier_module_util_context:mount"
 
 [project.urls]
-Repository = "https://github.com/salil/amplifier-module-util-context"
+Homepage = "https://github.com/sadlilas/amplifier-module-util-context"
+Repository = "https://github.com/sadlilas/amplifier-module-util-context"
 
 [build-system]
 requires = ["hatchling"]
